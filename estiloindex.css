@@ -36,7 +36,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 .navbar ul{
     position: absolute;
     left: 50%;
-    transform: translateX(-10%);
+    transform: translateX(-50%);
     display: flex;
     gap: 35px;
     list-style: none;
@@ -68,13 +68,26 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     opacity: 0.8;
 }
 
-.seccion-1{
-    background-color: rgb(47, 139, 219);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+.seccion-1 {
+    background-image: url("fondo1.jpg");
+
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    position: relative;
 }
+
+
+.seccion-1 h2 {
+color: #f3f3f3;
+  position: absolute;
+  top: 90px;       
+  left: 5%;       
+  margin: 0;       
+  font-size: 2rem;
+  z-index: 10;   
+}
+
 
 .seccion-2{
     background-color: rgb(247, 6, 6);
@@ -87,4 +100,3 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     justify-content: space-between;
     align-items: flex-end;
 }
-
