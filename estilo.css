@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+background: #112b6c;
+color: white;
+}
+
+.navbar{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 75px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 8%;
+z-index: 1000;
+
+background: rgba(0, 0, 0, 0.35);
+backdrop-filter: blur(8px);
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+.contenedor-principal {
+  display: flex;       
+  align-items: center; 
+  gap: 15px;          
+}
+
+
+.logo-container {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(243, 239, 239);
+}
+
+
+.logo{
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain !important;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+.navbar ul{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.navbar a{
+    color: rgb(214, 213, 213);
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a:hover{
+    color: white;
+}
+
+.seccion-prueba{
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 75px;
+}
+
+.seccion-prueba h2 {   
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+.seccion-1 {
+    background-image: url("../img/fondo1-2.png");
+
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    position: relative;
+}
+
+
+.seccion-1 h2 {
+color: #ffffff;
+  position: absolute;
+  top: 90px;       
+  left: 5%;       
+  margin: 0;       
+  font-size: 2rem;
+  z-index: 10;   
+}
+
+
+.seccion-2{
+    background-image: url("../img/fondo2.jpg");
+    
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    position: relative;
+}
+.seccion-3{
+    background-image: url("../img/fond.jpg");
+    
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    position: relative;
+
+}
+@media (max-width: 768px) {
+    .seccion-1, .seccion-2, .seccion-3 {
+        /* Centra la imagen perfectamente para que lo importante no quede cortado */
+        background-position: center center; 
+        
+        /* 'contain' hace que la imagen entera sea visible sin recortarse. 
+           Si prefieres que llene toda la pantalla aunque se corte un poco, déjalo en 'cover' */
+        background-size: cover; 
+        
+        /* Evita que la imagen se repita si usas 'contain' */
+        background-repeat: no-repeat; 
+    }
+
+    /* Ajuste para los títulos en el celular para que no se encimen */
+    .seccion-prueba h2, .seccion-1 h2 {
+        font-size: 1.5rem; /* Reduce el tamaño de la letra */
+        top: 90px;
+        left: 5%;
+        text-align: center;
+        width: 90%;
+    }
+}
