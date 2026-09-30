@@ -99,7 +99,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .seccion-1 {
-    background-image: url("../fondo1-2.png");
+    background-image: url("fondo1-2.png");
 
     background-size: cover;       
     background-position: center;  
@@ -109,7 +109,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
 
 .seccion-1 h2 {
-color: #6b2d2d;
+color: #ffffff;
   position: absolute;
   top: 90px;       
   left: 5%;       
@@ -120,7 +120,7 @@ color: #6b2d2d;
 
 
 .seccion-2{
-    background-image: url("../From Klickpin.com- Dreamy journaling prompts that make your next project look polished and expensive for the kind of style that stands out instant.jpg");    
+    background-image: url("fondo2.jpg");
     
     background-size: cover;       
     background-position: center;  
@@ -128,11 +128,10 @@ color: #6b2d2d;
     position: relative;
 }
 .seccion-3{
-    background-image: url("../fond.jpg");
+    background-image: url("fond.jpg");
     
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat; 
     position: relative;
 
-}
