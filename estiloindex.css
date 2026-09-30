@@ -6,7 +6,7 @@ css
 }
 
 body {
-    background: #112b6c;
+    background: #020202;
     color: white;
 }
 
@@ -116,4 +116,67 @@ body {
     background-repeat: no-repeat; 
     position: relative;
 }
+
+
+
+
+
+
+
+/* MENU OPCION/*
+.menu-cumple summary {
+    list-style: none;
+    cursor: pointer;
+}
+.menu-cumple summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Contenedor del menú interactivo */
+.menu-cumple {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilos de la lista de opciones desplegable */
+.menu-opciones {
+    position: absolute;
+    top: 60px; /* Se posiciona debajo de la imagen */
+    left: 0;
+    background: rgba(17, 43, 108, 0.95); /* Color azul como tu body */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+    z-index: 2000;
+    
+    /* Reseteo para que no use la configuración anterior */
+    display: flex;
+    flex-direction: column;
+    gap: 0px !important; 
+    transform: none !important;
+}
+
+/* Estilos para los elementos de la lista */
+.menu-opciones li {
+    list-style: none;
+}
+
+.menu-opciones a {
+    display: block;
+    padding: 10px 20px;
+    color: white !important;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+/* Efecto al pasar el dedo o cursor por encima */
+.menu-opciones a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
 
