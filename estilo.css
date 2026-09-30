@@ -99,8 +99,8 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .seccion-1 {
-    background-image: url("fondo1-2.png");
-
+    background-image: url("fondo1-2.png"); 
+}
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat; 
@@ -119,9 +119,9 @@ color: #ffffff;
 }
 
 
-.seccion-2{
-    background-image: url("Fondo2.jpg");
-    
+.seccion-2 {
+    background-image: url("Fondo2.jpg"); 
+}
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat; 
