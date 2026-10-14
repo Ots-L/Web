@@ -179,4 +179,192 @@ body {
 }
 
 
+.mi-imagen {
+    position: absolute;
+    top: 50px;
+    left: 300px;
+    width: 20%;
+    height: auto;
+}
+.palabras {
+    transform: translate(8px, 290px);
+}
+
+.carrusel-contenedor {
+    width: 25%;
+    min-width: 190px;
+    max-width: 300px;
+    position: absolute;
+
+    /* Posición inferior central */
+    left: 280px;
+    bottom: 250px;
+    transform: translateX(-50%);
+
+    text-align: center;
+        z-index: 20;
+}
+
+
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.3);
+    box-shadow:
+        0 0 15px rgba(19, 3, 247, 0.6),
+        0 0 30px rgba(52, 49, 255, 0.3);
+}
+.carrusel-contenedor h3 {
+    color: #3431ff;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-shadow:
+        0 0 4px rgba(4, 80, 243, 0.8),
+        0 0 8px rgba(4, 40, 243, 0.6);
+}
+
+
+.carrusel-item {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+}
+/* Asegura que todas las imágenes del carrusel llenen el mismo rectángulo */
+.carrusel-item img,
+.carrusel .carrusel-item img,
+.carrusel-item > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;       /* rellena el contenedor sin "desnivel" */
+  object-position: center !important; /* cambia a "center 30%" si necesitas subir el foco */
+  display: block !important;
+  border-radius: 20px;                 /* opcional: que coincida con el contenedor */
+  pointer-events: none;
+  user-select: none;
+}
+.carrusel-item.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carrusel-item video {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    background: #1b03f7;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 15, 255, 0.2);
+    color: rgb(241, 242, 247);
+    border: none;
+    border-radius: 1px;
+    width: 38px;
+    height: 38px;
+    font-size: 23px;
+    cursor: pointer;
+    z-index: 5;
+    transition: 0.3s ease;
+}
+
+.carrusel-btn:hover {
+    background: rgba(10, 15, 255, 0.2); /* 60% opaco */
+    box-shadow: 0 0 15px rgba(88, 76, 247, 0.8);
+}
+
+.carrusel-prev {
+    left: 10px;
+}
+
+.carrusel-next {
+    right: 10px;
+}
+
+@media (max-width: 1px) {
+    .comunidad-layout {
+        flex-direction: column;
+    }
+
+    .fanart-col {
+        width: 90%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .fanart-card {
+        width: 180px;
+    }
+
+    .carrusel-contenedor {
+        width: 90%;
+    }
+}
+
+
+
+.neon-ornamento {
+        position: absolute;
+    /* Conserva tus posiciones y dimensiones */
+    filter:
+        drop-shadow(0 0 4px #174bff)
+        drop-shadow(0 0 14px #174bff);
+
+    animation: neonRespirar 3s ease-in-out infinite;
+}
+
+.neon-ornamento svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+}
+
+@keyframes neonRespirar {
+    0%, 100% {
+        opacity: 0.92;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .neon-ornamento {
+        width: 75vw;
+        height: 220px;
+    }
+}
+
+/* PRIMER ORNAMENTO */
+.neon-uno {
+    top: 30%;
+    left: 22%;
+    width: 30%;
+    height: 250px;
+
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* SEGUNDO ORNAMENTO */
+.neon-dos {
+    top: 30%;
+    left: 70%;
+    width: 30%;
+    height: 250px;
+
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
 
