@@ -565,3 +565,67 @@ body {
     border-radius: 8px;
 }
 
+
+/* Primero, asegúrate de que el contenedor padre (Sección 2) permita posicionamiento absoluto */
+#seccion02 {
+  position: relative;
+  padding-top: 140px; /* Deja un espacio arriba para que el generador no tape el título */
+}
+.contenedor-cumplidos {
+  position: absolute;
+  top: 60px;             /* Lo empuja hacia la parte superior */
+  left: 50%;
+  transform: translateX(-50%); /* Estos dos comandos lo centran perfectamente de forma horizontal */
+  z-index: 20;           /* Lo coloca por encima del fondo para que puedas hacerle clic sin problemas */
+  
+  text-align: center;
+  width: 90%;
+  max-width: 320px;
+  margin: 0;             /* Eliminamos los márgenes anteriores */
+}
+
+.tarjeta-cumplido {
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente */
+  border: 2px solid #1100ff;       /* Borde rosa neón/fucsia */
+  border-radius: 15px;
+  padding: 20px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-cumplido p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Botón Interactivo */
+#boton-cumplido {
+  background: linear-gradient(45deg, #210aee, #7f00ff); /* Degradado fucsia y morado */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(127, 0, 255, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#boton-cumplido:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 0, 127, 0.6);
+}
+
+#boton-cumplido:active {
+  transform: scale(0.95);
+}
