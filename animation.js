@@ -105,3 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
     img.style.inset = '0';
   });
 });
+
+await musica.play();
+boton.textContent = "🎵 Música activada";
+boton.dataset.activada = "true";
+
