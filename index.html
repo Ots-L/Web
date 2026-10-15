@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CinePlanet</title>
-
+    <link rel="stylesheet" href="animation.js">
     <link rel="stylesheet" href="estiloindex.css">
 </head>
 <body>
@@ -25,24 +25,6 @@
 ">
     🎵 Activar música
 </button>
-
-<script>
-const musica = document.getElementById("musicaFondo");
-const boton = document.getElementById("activarMusica");
-
-musica.volume = 0.25;
-
-boton.addEventListener("click", async () => {
-    try {
-        await musica.play();
-        boton.textContent = "🎵 Música activada";
-    } catch (error) {
-        boton.textContent = "Error: revisa el archivo";
-        console.error(error);
-    }
-});
-</script>
-<script src="animation.js"></script>
 
     <!--BARRA DE NAVEGACION-->
 
@@ -368,6 +350,50 @@ para mí.    </p>
     </section>
       <h2>=========END===========</h2>
     <h2>(づ｡◕‿‿◕｡)づ⦏T̂⦎⦏ĥ⦎⦏â⦎⦏n̂⦎⦏k̂⦎ <div ></div> ⦏Ŷ⦎⦏ô⦎⦏u⦎ ٩(˘◡˘)۶ </h2>
+<script>
+const musica = document.getElementById("musicaFondo");
+const boton = document.getElementById("activarMusica");
+
+musica.volume = 0.25;
+
+// Activar la música al pulsar el botón
+boton.addEventListener("click", async () => {
+    try {
+        await musica.play();
+        boton.dataset.activada = "true";
+        boton.textContent = "🎵 Música activada";
+    } catch (error) {
+        console.error("Error al reproducir música:", error);
+        boton.textContent = "Error: revisa el archivo";
+    }
+});
+
+// Obtener todos los videos de la página
+const videos = document.querySelectorAll("video");
+
+// Pausar la música al reproducir cualquier video
+videos.forEach(video => {
+    video.addEventListener("play", () => {
+        musica.pause();
+    });
+
+    // Reanudar la música cuando ya no se reproduzca ningún video
+    function revisarVideos() {
+        const hayVideoActivo = [...videos].some(
+            v => !v.paused && !v.ended
+        );
+
+        if (!hayVideoActivo && boton.dataset.activada === "true") {
+            musica.play().catch(error => {
+                console.log("No se pudo reanudar la música:", error);
+            });
+        }
+    }
+
+    video.addEventListener("pause", revisarVideos);
+    video.addEventListener("ended", revisarVideos);
+});
+</script>
 
 </body>
 </html>
