@@ -629,3 +629,42 @@ body {
 #boton-cumplido:active {
   transform: scale(0.95);
 }
+
+
+
+/* Asegura que la tarjeta ordene todo de arriba hacia abajo */
+.tarjeta-cumplido {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;     /* Centra todo horizontalmente */
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos exclusivos para centrar tu subtítulo */
+.subtitulo-chistes {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 15px;    /* Deja un espacio abajo del título antes de los chistes */
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;     /* Lo clava perfectamente en el medio */
+}
+
+/* Espaciado vertical para que los chistes no se peguen entre sí */
+.bloque-dinamico {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;              /* Controla la separación entre el primer chiste y el segundo */
+  width: 100%;
+}
+
+.chiste-secundario {
+  color: #ffffff;
+  font-size: 15px;
+  margin: 0;
+}
+
