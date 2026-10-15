@@ -368,3 +368,200 @@ body {
 }
 
 
+.container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+.caja {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    float: left;
+    position: relative;
+    overflow: visible; 
+    z-index: 1;
+}
+
+.caja img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.caja1:hover img {
+    transform: scale(1.5);
+}
+
+.caja1 {
+    transition: box-shadow 0.5s ease;
+}
+
+.caja1:hover {
+    z-index: 10;
+    overflow: visible;
+}
+
+
+#seccion02 {
+  display: flex;
+  flex-direction: column; /* Mantiene el título arriba y la ruleta abajo */
+  
+  /* OPCIONES DE ALINEACIÓN (Elige una): */
+  align-items: center;      /* Centrado horizontal (Actual) */
+  /* align-items: flex-start;  Mueve la ruleta a la IZQUIERDA */
+  /* align-items: flex-end;    Mueve la ruleta a la DERECHA */
+}
+
+.rueda-invisible {
+    --radio: 120px;
+    --cuadrado: 105px;
+
+    position: relative;
+    width: calc(var(--radio) * 2 + var(--cuadrado));
+    height: calc(var(--radio) * 2 + var(--cuadrado));
+    margin: 80px 0;
+    background: transparent;
+}
+.rueda-invisible {
+  margin: auto; 
+  transform: translate(15px, -5px);
+  margin-top: 10px;    /* Controla el espacio superior (sube o baja) */
+  margin-bottom: -450px;
+}
+.rueda-cuadrado {
+    position: absolute;
+    width: var(--cuadrado);
+    height: var(--cuadrado);
+    left: 50%;
+    top: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 2px solid #0004ff;
+    border-radius: 8px;
+    background: #ff0303;
+    transform: translate(-50%, -50%);
+}
+.rueda-cuadrado img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.rueda-cuadrado.destacado {
+    z-index: 10;
+    transform: translate(-65%, -50%) scale(1.12);
+    box-shadow: 0 0 18px rgba(4, 0, 255, 0.8);
+    border-color: rgb(34, 32, 32);
+}
+
+/* Cuadrados de la ruleta */
+.rueda-cuadrado {
+    cursor: pointer;
+    z-index: 1;
+    overflow: visible;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Imagen dentro del cuadrado */
+.rueda-cuadrado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Cuadrado ampliado al hacer clic */
+.rueda-cuadrado.activo {
+    z-index: 100;
+    transform: translate(-50%, -50%) scale(1.5);
+    box-shadow: 0 0 25px rgba(2, 27, 247, 0.9);
+}
+
+
+
+
+
+/* SECCIÓN COMPLETA */
+#seccion03 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* TÍTULO */
+#seccion03 h2 {
+    margin: 0;
+    width: 100%;
+}
+
+/* GALERÍA DE VIDEOS */
+.videos-galeria {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+}
+
+
+/* VIDEO 1 */
+.video-1 {
+    position: absolute;
+    width: 180px;
+    height: auto;
+    top: 15px;
+    left: -15px;
+    object-fit: contain;
+}
+
+/* VIDEO 2 */
+.video-2 {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 350px;
+    left: 190px;
+    object-fit: contain;
+}
+
+/* VIDEO 3 */
+.video-3 {
+    position: absolute;
+    width: 170px;
+    height: auto;
+    top: 423px;
+    left: -15px;
+    object-fit: contain;
+}
+
+
+
+/* GALERÍA DE IMÁGENES */
+.imagenes-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 12px;
+    margin-top: auto;
+}
+
+/* IMÁGENES */
+.meme-galeria {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
