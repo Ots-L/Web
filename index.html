@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CinePlanet</title>
-    <link rel="stylesheet" href="animation.js">
     <link rel="stylesheet" href="estiloindex.css">
+    <link rel="stylesheet" href="animation.js">
     <link rel="stylesheet" href="music.js">
-
+    <link rel="stylesheet" href="cumplidos.js">
 </head>
 <body>
 <audio id="musicaFondo" loop>
@@ -295,7 +295,12 @@ para mí.    </p>
 </section>
 
 <section id="seccion02" class="seccion-prueba seccion-2">
-<h2>Sección 2</h2>
+<div class="contenedor-cumplidos">
+  <div class="tarjeta-cumplido">
+    <p id="texto-cumplido">=¡HAY MAS DE 1000 CUMPLIDOS!=🌟( ˘︹˘ )</p> 
+  </div>
+  <button id="boton-cumplido">ʕ•́ᴥ•̀ʔっ♡Presiona aquí</button>
+</div>
     <div class="rueda-invisible">
 
         <div class="rueda-orbita">
@@ -312,6 +317,7 @@ para mí.    </p>
             <div class="rueda-cuadrado"><img src="Contenedor/Con6.jpeg" alt="Descripción 6"></div>
         </div>
     </div>
+
 <script src="ruleta.js" defer></script>
 
 </section>
@@ -397,7 +403,7 @@ videos.forEach(video => {
 });
 </script>
 <script src="animation.js"></script>
-
+<script src="cumplidos.js"></script>
 </body>
 </html>
 
